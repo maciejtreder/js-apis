@@ -10,7 +10,7 @@ $(document).ready(() => {
 
          $('#acceleration-x').text(x);
          $('#acceleration-y').text(y);
-         $('#acceleration-z').text(z);
+         $('#acceleration-z').text(Math.round(event.rotationRate.alpha));
 
 
          $('#rotation-rate-beta').text(Math.round(event.rotationRate.beta));
