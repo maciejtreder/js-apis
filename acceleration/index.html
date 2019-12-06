@@ -2,8 +2,7 @@
     <head>
             <link rel="stylesheet" href="../style.css" />
             <link rel="stylesheet" href="style.css" />
-            <script src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
-            <script src="ambient_light.js"></script>
+            <script src="gyroscope.js"></script>
     </head>
     <body>
         <nav>
@@ -17,10 +16,15 @@
             <a href="../network">network info</a>
             <a href="../fullscreen">fullscreen</a>
         </nav>
-        <h1>Ambient Light API demo</h1>
+        <h1>Acceleration API demo</h1>
         <content>
-            <div id="details">
-            </div>
+            <p>
+                Acceleration:
+                (<span id="acceleration-x" class="value">null</span>,
+                <span id="acceleration-y" class="value">null</span>,
+                <span id="acceleration-z" class="value">null</span>)
+                m/s<sup>2</sup>
+            </p>
         </content>
     </body>
 </html>
