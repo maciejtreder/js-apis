@@ -12,6 +12,11 @@ $(document).ready(() => {
          $('#acceleration-y').text(y);
          $('#acceleration-z').text(z);
 
+
+         $('#rotation-rate-beta').text(Math.round(event.rotationRate.beta));
+         $('#rotation-rate-gamma').text(Math.round(event.rotationRate.gamma));
+         $('#rotation-rate-alpha').text(Math.round(event.rotationRate.alpha));
+
       });
    }
 });
