@@ -20,19 +20,19 @@ $(document).ready(() => {
 
 
    if (window.AmbientLightSensor){
-      try{
-      const sensor = new AmbientLightSensor();
-      // Detect changes in the light
-      sensor.onreading = () => {
-         details.innerHTML = sensor.illuminance;
-            $('content').css('background-color', 'rgba(255,0,255,' + sensor.illuminance + ')');
-      }
+      try {
+         const sensor = new AmbientLightSensor();
+         // Detect changes in the light
+         sensor.onreading = () => {
+            details.innerHTML = sensor.illuminance;
+               $('content').css('background-color', 'rgba(255,0,255,' + sensor.illuminance + ')');
+         };
 
-      // Has an error occured?
-      sensor.onerror = event => document.getElementById("details").innerHTML = event.error.message;
-      sensor.start();
+         // Has an error occured?
+         sensor.onerror = event => document.getElementById("details").innerHTML = event.error.message;
+         sensor.start();
       } catch(err) {
-      details.innerHTML = err.message;
+         details.innerHTML = err.message;
       }
    } else {
       details.innerHTML = 'It looks like your browser doesnt support this feature'; 
