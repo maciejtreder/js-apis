@@ -5,6 +5,8 @@ $(document).ready(() => {
 
       navigator.geolocation.getCurrentPosition((position) => {
 
+         console.log(position);
+
          details.innerHTML = position.coords.latitude + ',' + position.coords.longitude;
 
       });
