@@ -10,14 +10,17 @@ $(document).ready(() => {
    window.addEventListener('online', () => $('#online').text('online'));
    window.addEventListener('offline', () => $('#online').text('offline'));
 
-   const info = getConnection();
-   if (info) {
-      info.addEventListener('change', event => {
-         document.getElementById('networkType').innerHTML = info.type;
-         document.getElementById('effectiveNetworkType').innerHTML = info.effectiveType;
-         document.getElementById('downlinkMax').innerHTML = info.downlinkMax;
-      });
-   }
+const info = getConnection();
+if (info) {
+   info.addEventListener('change', event => {
+      const type = info.type;
+      const effectiveType = info.effectiveType;
+      const downlinkMax = info.downlinkMax;
+      document.getElementById('networkType').innerHTML = info.type;
+      document.getElementById('effectiveNetworkType').innerHTML = info.effectiveType;
+      document.getElementById('downlinkMax').innerHTML = info.downlinkMax;
+   });
+}
 
 });
 
