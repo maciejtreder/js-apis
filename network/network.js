@@ -5,6 +5,8 @@ function getConnection() {
 
 $(document).ready(() => {
 
+   $('#online').text(navigator.onLine);
+
    window.addEventListener('online', () => $('#online').text('online'));
    window.addEventListener('offline', () => $('#online').text('offline'));
 
